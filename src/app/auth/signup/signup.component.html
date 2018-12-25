@@ -12,7 +12,7 @@
 </section>-->
 
 <section class="signup-form">
-  <form  class="flex-container" #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <form class="flex-container" #f="ngForm" (ngSubmit)="onSubmit(f)">
     <mat-form-field>
       <input
         type="email"
@@ -46,29 +46,37 @@
       >
       <mat-hint align="end">{{ pwInput.value?.length }}/ 6</mat-hint>
       <mat-error>
-       Has to be at least 6 characters long
+        Has to be at least 6 characters long
       </mat-error>
     </mat-form-field>
 
 
-      <mat-form-field>
-        <input
-          matInput
-          [matDatepicker]="picker"
-          placeholder="Choose a date"
-          [max]="maxDate"
-          ngModel
-          name="birthdate"
-          required
-        >
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="Choose a date"
+        [max]="maxDate"
+        ngModel
+        name="birthdate"
+        required
+      >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
 
+      <mat-checkbox
+        ngModel
+        name="agree"
+        color="primary"
+        required
+        labelPosition="before">
+        Agree to Terms and Conditions
+      </mat-checkbox>
+    <!--<app-material-file-upload (complete)="onFileComplete($event)"></app-material-file-upload>
+    <input id="md-input-file" type="file" >-->
 
-
-      <mat-checkbox ngModel name="agree" color="primary" required labelPosition="before">Agree to Terms and Conditions</mat-checkbox>
-
+    <!-- <app-my-material-upload accept=".jpg"></app-my-material-upload>-->
 
     <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
   </form>

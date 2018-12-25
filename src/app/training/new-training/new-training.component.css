@@ -1,0 +1,19 @@
+.new-training{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.new-training__card{
+  width:400px;
+}
+.centered{
+  display:flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 959px)  {
+  .new-training__card{
+    width:100%;
+  }
+}

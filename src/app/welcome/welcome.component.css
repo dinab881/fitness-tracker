@@ -5,3 +5,14 @@
   align-items: center;
   text-align: center;
 }
+
+@media screen and (min-width: 960px)  {
+  .welcome{
+    flex-direction: row;
+
+  }
+
+  .welcome > *{
+    margin:10px;
+  }
+}
