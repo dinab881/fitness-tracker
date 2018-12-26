@@ -21,6 +21,7 @@ import { MyMaterialUploadComponent } from './my-material-upload/my-material-uplo
 import {StopTrainingComponent} from './training/current-training/stop-training.component';
 import {AuthService} from './auth/auth.service';
 import {TrainingService} from './training/training.service';
+import { RatingInputComponent } from './rating-input/rating-input.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {TrainingService} from './training/training.service';
     SidenavListComponent,
     MaterialFileUploadComponent,
     MyMaterialUploadComponent,
-     StopTrainingComponent
+     StopTrainingComponent,
+     RatingInputComponent
   ],
   imports: [
     BrowserModule,
