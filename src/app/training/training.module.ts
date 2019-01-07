@@ -8,11 +8,14 @@ import {SharedModule} from '../shared/shared.module';
 import {MaterialFileUploadComponent} from '../material-file-upload/material-file-upload.component';
 import {MyMaterialUploadComponent} from '../my-material-upload/my-material-upload.component';
 import {TrainingRoutingModule} from './training-routing.module';
+import { StoreModule } from '@ngrx/store';
+import { trainingReducer } from './training.reducer';
 
 @NgModule({
   imports: [
     SharedModule,
-    TrainingRoutingModule
+    TrainingRoutingModule,
+    StoreModule.forFeature('training', trainingReducer)
   ],
   declarations: [
     TrainingComponent,
